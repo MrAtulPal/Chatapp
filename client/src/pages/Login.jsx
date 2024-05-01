@@ -10,7 +10,7 @@ import {
   IconButton,
 } from "@mui/material";
 import { CameraAlt } from "@mui/icons-material";
-import { VisuallyHiddenInput } from "../components/Styles/StyledComponnets";
+import { VisuallyHiddenInput } from "../components/Styles/StyledComponents";
 import { useInputValidation, useFileHandler } from "6pp";
 import { userNameValidator } from "../utils/validator";
 
