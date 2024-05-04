@@ -12,8 +12,8 @@ export const sampleChats = [
         name: "Jane",
         message: "Hi",
         members: [1, 2],
-        groupChat: false,
-        avatar: ["https://cdn-icons-png.flaticon.com/512/149/149071.png"],
+        groupChat: true,
+        avatar: ["https://cdn-icons-png.flaticon.com/512/149/149071.png", "https://cdn-icons-png.flaticon.com/512/149/149071.png"],
     },
     {
         _id: 3,
