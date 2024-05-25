@@ -32,3 +32,23 @@ export const sampleChats = [
         avatar: ["https://cdn-icons-png.flaticon.com/512/149/149071.png"],
     },
 ]
+
+export const sampleUser = [
+    {
+        _id: 1,
+        name: "Jane",
+        message: "Hi",
+        members: [1, 2],
+        groupChat: false,
+        avatar: ["https://cdn-icons-png.flaticon.com/512/149/149071.png"],
+    },
+    {
+        _id: 2,
+        name: "Harry",
+        message: "Hi",
+        members: [1, 2],
+        groupChat: false,
+        avatar: ["https://cdn-icons-png.flaticon.com/512/149/149071.png"],
+    }
+
+]
