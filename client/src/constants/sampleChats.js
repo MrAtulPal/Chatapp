@@ -52,3 +52,20 @@ export const sampleUser = [
     }
 
 ]
+
+export const sampleNotification = [
+    {
+        sender:{
+            avatar: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+            name: "Jane",
+        },
+        _id: 1
+    },
+    {
+        sender:{
+            avatar: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+            name: "Harry",
+        },
+        _id: 2
+    }
+] 
