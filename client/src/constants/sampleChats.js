@@ -69,3 +69,38 @@ export const sampleNotification = [
         _id: 2
     }
 ] 
+
+export const sampleMessage = [
+    {
+        attachments: [
+            {
+                public_id: 'sfs',
+                url: "https://cdn-icons-png.flaticon.com/512/149/149071.png"
+            }
+        ],
+        content: "Whats up niggas!",
+        _id: 'dsfs',
+        sender: {
+            _id: 'fsd',
+            name: 'atulknowsme'
+        },
+        chat: 'chatId',
+        createdAt: "2024-02-12T21:00:00.000Z"
+    },
+    {
+        attachments: [
+            {
+                public_id: 'sfs',
+                url: "https://cdn-icons-png.flaticon.com/512/149/149071.png"
+            }
+        ],
+        content: "party at ma house tonight!",
+        _id: 'dsf',
+        sender: {
+            _id: 'fsda',
+            name: 'atulknowsme'
+        },
+        chat: 'chatId',
+        createdAt: "2024-02-12T21:00:00.000Z"
+    },
+]

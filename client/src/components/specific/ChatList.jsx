@@ -13,7 +13,7 @@ const ChatList = ({
   return (
     <Stack width={w}>
       {chats?.map((data, index) => {
-        const sameSender = chatId === data._id;
+        const sameSender = chatId == data._id;
         const { _id, name, message, members, groupChat, avatar } = data;
         return (
           <ChatItem

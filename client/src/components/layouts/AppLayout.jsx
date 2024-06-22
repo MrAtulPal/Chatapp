@@ -10,7 +10,7 @@ import Profile from "../specific/Profile";
 const AppLayout = () => (WrappedComponent) => {
   return (props) => {
     const params = useParams();
-    const chatId = params.chatId || "";
+    const chatId = params.chatID || "";
 
     const handleDeleteChat = (el, _id, groupChat) => {
       e.preventDefault();
