@@ -1,5 +1,6 @@
 import { Avatar, AvatarGroup, Box, Stack } from "@mui/material";
 import React from "react";
+import { transformImg } from "../../lib/features";
 
 const AvatarCard = ({ avatar = [], max = 4 }) => {
   return (
@@ -9,7 +10,7 @@ const AvatarCard = ({ avatar = [], max = 4 }) => {
           <Box width={"3rem"} height={"5rem"}>
             {avatar.map((src, index) => (
               <Avatar
-                src={src}
+                src={transformImg(src)}
                 key={index}
                 sx={{
                   width: "3rem",
