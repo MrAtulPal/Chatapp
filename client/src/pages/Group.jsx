@@ -20,11 +20,12 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import { matBalck } from "../constants/colors";
+import { bgGradient, matBalck } from "../constants/colors";
 import { Link } from "../components/Styles/StyledComponents";
-import { sampleChats } from "../constants/sampleChats";
+import { sampleChats, sampleUser } from "../constants/sampleChats";
 import AvatarCard from "../components/shared/AvatarCard";
 import AddMembers from "../components/dialog/AddMembers";
+import UserItem from "../components/shared/UserItem";
 
 const ConfirmModal = lazy(() => import("../components/dialog/ConfirmModal"));
 const isAddMember = false;
@@ -58,7 +59,12 @@ const Group = () => {
   const deleteGroup = () => {};
 
   const openAddMemberHandler = () => {};
+
+  const removeMemberHandler = (id) => {
+    console.log('Remove member', id);
+  };
   React.useEffect(() => {
+    if(!chatId) return;
     setUpdatedGroupName(`Train alert ${chatId}`);
     setGroupName(`Train alert ${chatId}`);
 
@@ -176,7 +182,6 @@ const Group = () => {
         sx={{
           display: { xs: "none", sm: "block" },
         }}
-        bgcolor={"bisque"}
       >
         <GroupLists groups={sampleChats} chatId={chatId} />
       </Grid>
@@ -193,7 +198,7 @@ const Group = () => {
         }}
       >
         {IconBtns}
-        {groupName && (
+        {groupName ? (
           <>
             {GroupName}
             <Typography
@@ -213,15 +218,29 @@ const Group = () => {
                 md: "1rem 4rem",
               }}
               spacing={"1rem"}
-              bgcolor={"bisque"}
               height={"50vh"}
               overflow={"auto"}
             >
               {/* {memeber} */}
+              {
+                sampleUser.map((user, index) => (
+                  <UserItem
+                    key={index}
+                    user={user}
+                    isAdded
+                    styling={{
+                      boxShadow: "0 0 0.5rem rgba(0,0,0,0.2)",
+                      borderRadius: "1rem",
+                      padding: "1rem 2rem",
+                    }}
+                    handler={removeMemberHandler}
+                  />
+                ))
+              }
             </Stack>
             {ButtonGroup}
           </>
-        )}
+        ) : (<Typography variant="h4" height={"100%"} justifyContent={"center"} display={"flex"} alignItems="center">Select a group!</Typography>)}
       </Grid>
 
       {isAddMember && (
@@ -254,7 +273,7 @@ const Group = () => {
 };
 
 const GroupLists = ({ w = "100%", groups = [], chatId }) => (
-  <Stack width={w}>
+  <Stack width={w} sx={{ height: "100vh", backgroundImage: bgGradient, overflow: 'auto'  }}>
     {groups.length ? (
       groups.map((data) => {
         return <GroupItem key={data._id} group={data} chatId={chatId} />;

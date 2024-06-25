@@ -11,7 +11,7 @@ const ChatList = ({
   handleDeleteChat,
 }) => {
   return (
-    <Stack width={w}>
+    <Stack width={w} overflow={"auto"} height={"100%"}>
       {chats?.map((data, index) => {
         const sameSender = chatId == data._id;
         const { _id, name, message, members, groupChat, avatar } = data;
