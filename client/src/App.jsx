@@ -9,12 +9,15 @@ const Login = lazy(() => import("./pages/Login"));
 const Group = lazy(() => import("./pages/Group"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
+const AdminLogin = lazy(() => import("./pages/admin/AdminLogin"));
+const Dashboard = lazy(() => import("./pages/admin/Dashboard"));
+
 const App = () => {
   const user = true;
 
   return (
     <BrowserRouter>
-      <Suspense fallback={<AppLoader/>}>
+      <Suspense fallback={<AppLoader />}>
         <Routes>
           <Route element={<ProtectRoute user={user} />}>
             <Route path="/" element={<Home />} />
@@ -31,6 +34,8 @@ const App = () => {
             }
           />
 
+          <Route path="/admin" element={<AdminLogin />} />
+          <Route path="/admin/dashboard" element={<Dashboard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

@@ -76,6 +76,8 @@ const Login = () => {
                   label="Username"
                   margin="normal"
                   variant="outlined"
+                  value={userName.value}
+                  onChange={userName.changeHandler}
                 />
                 <TextField
                   required
@@ -84,6 +86,8 @@ const Login = () => {
                   type="password"
                   margin="normal"
                   variant="outlined"
+                  value={password.value}
+                  onChange={password.changeHandler}
                 />
 
                 <Button
