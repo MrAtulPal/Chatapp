@@ -29,17 +29,17 @@ const adminTabs = [
   },
   {
     name: "User",
-    path: "/admin/user-management",
+    path: "/admin/users-management",
     icon: <ManageAccountsIcon />,
   },
   {
     name: "Chat",
-    path: "/admin/chat-management",
+    path: "/admin/chats-management",
     icon: <GroupIcon />,
   },
   {
     name: "Message",
-    path: "/admin/messages",
+    path: "/admin/messages-management",
     icon: <MessageIcon />,
   },
 ];
